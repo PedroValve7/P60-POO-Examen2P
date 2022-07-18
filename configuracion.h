@@ -2,7 +2,9 @@
 #define CONFIGURACION_H
 
 #include <QDialog>
+#include <QPaintEvent>
 #include <QColorDialog>
+
 
 namespace Ui {
 class Configuracion;
@@ -31,6 +33,8 @@ private:
     int m_dimension;
 
     void setWidgetColor();
+    QImage *mImagen;
+    QPainter *mPainter;
 };
 
 #endif // CONFIGURACION_H

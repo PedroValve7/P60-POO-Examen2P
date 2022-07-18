@@ -1,5 +1,9 @@
 #include "configuracion.h"
 #include "ui_configuracion.h"
+#include "circulo.h"
+#include <QDialog>
+#include <QColorDialog>
+#include <QMainWindow>
 
 Configuracion::Configuracion(QWidget *parent) :
     QDialog(parent),
@@ -8,6 +12,12 @@ Configuracion::Configuracion(QWidget *parent) :
     ui->setupUi(this);
     m_color.setRgb(165,29,45);
     setWidgetColor();
+    mImagen = new QImage(this->size(),QImage::Format_ARGB32_Premultiplied);
+    //Rellenado imagen color verde
+    mImagen->fill(Qt::green);
+    //Painter a partir de la imagen
+    mPainter = new QPainter (mImagen);
+    mPainter->setRenderHint(QPainter::Antialiasing);
 }
 
 Configuracion::~Configuracion()
@@ -17,7 +27,9 @@ Configuracion::~Configuracion()
 
 void Configuracion::on_btnColor_released()
 {
-
+delete ui;
+    delete mPainter;
+    delete mImagen;
 }
 
 void Configuracion::setColor(const QColor &newColor)
