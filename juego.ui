@@ -138,7 +138,6 @@
     <addaction name="separator"/>
     <addaction name="actionConfigraci0n"/>
     <addaction name="separator"/>
-    <addaction name="separator"/>
     <addaction name="actionSalir"/>
    </widget>
    <addaction name="menuArchivo"/>
