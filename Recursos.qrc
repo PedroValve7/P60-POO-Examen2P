@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Recursos/rueda-de-color.png</file>
+        <file>Recursos/circulo-de-color.png</file>
+    </qresource>
+</RCC>
